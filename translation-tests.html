@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class='notranslate' >Google Translation Tests</title>
+    <style>
+        body {
+            max-width: 60rem;
+            margin: 0 auto;
+            font-family: sans-serif;
+            line-height: 1.5em;
+            text-align: center;
+        }
+        #phrases {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        #phrases > :nth-child(2n - 1) {
+            text-align: right;
+            padding-right: 15px;
+            border-right: 1px solid #c3c3c3;
+        }
+        #phrases > :nth-child(2n) {
+            text-align: left;
+            padding-left: 15px;
+        }
+
+        #phrases > :nth-child(4n + 3),
+        #phrases > :nth-child(4n + 4) {
+            background: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <h1 class='notranslate'>Google Translation Tests</h1>
+    <div id='phrases'>
+
+    </div>
+    <script>
+        let phrasesEl = document.getElementById('phrases')
+        let phrases = [
+            'Do you own your home?',
+            'Yes',
+            '1 - 5 years',
+            'Ford',
+            'claims',
+            'Discounts',
+            'save $768',
+            '$',
+            '<span>$</span><span>49</span>',
+            ' On average per year*',
+            'Open now: 9am-9pm',
+            '9am-9pm',
+            'AM / PM',
+            'AM',
+            'PM',
+            '<strong>Drive</strong>&nbsp;away, covered!',
+            'male vs female',
+            'man vs woman',
+            'masculine vs feminine',
+            'Real Quotes From Trusted Brands',
+            '<div>Real</div> <div>Quotes From</div> <div>Trusted</div> <div>Brands</div>',
+        ]
+
+        let phrasesHeader = `<b class='notranslate'> Original </b><b class='notranslate'> Translated </b>`
+        let phrasesBody = phrases.map(p => `<div class='notranslate'>${p}</div><div>${p}</div>`).join('')
+
+        phrasesEl.innerHTML = `${phrasesHeader}\n${phrasesBody}`
+    </script>
+</body>
+</html>
