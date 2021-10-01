@@ -31,6 +31,9 @@
         #phrases > :nth-child(4n + 4) {
             background: #f0f0f0;
         }
+        #phrases div {
+            display: inline;
+        }
     </style>
 </head>
 <body>
@@ -44,11 +47,14 @@
             'Do you own your home?',
             'Yes',
             '1 - 5 years',
+            '1 — 5 years',
+            '1 to 5 years',
             'Ford',
             'claims',
             'Discounts',
             'save $768',
             '$',
+            '<b>$</b><div>49</div>',
             '<span>$</span><span>49</span>',
             ' On average per year*',
             'Open now: 9am-9pm',
@@ -61,11 +67,11 @@
             'man vs woman',
             'masculine vs feminine',
             'Real Quotes From Trusted Brands',
-            '<div>Real</div> <div>Quotes From</div> <div>Trusted</div> <div>Brands</div>',
+            '<b>Real</b> <div>Quotes From</div> <b>Trusted</b> <div>Brands</div>',
         ]
 
         let phrasesHeader = `<b class='notranslate'> Original </b><b class='notranslate'> Translated </b>`
-        let phrasesBody = phrases.map(p => `<div class='notranslate'>${p}</div><div>${p}</div>`).join('')
+        let phrasesBody = phrases.map(p => `<div translate="no">${p}</div><div>${p}</div>`).join('')
 
         phrasesEl.innerHTML = `${phrasesHeader}\n${phrasesBody}`
     </script>
