@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "run": "ts-node index.ts",
-    "run:basic": "ts-node basic.ts"
+    "start": "ts-node index.ts",
+    "start:basic": "ts-node basic.ts"
   },
   "keywords": [],
   "author": "",
